@@ -1,0 +1,92 @@
+.partner-section {
+    width: 100%;
+    height: 700px;
+    position: relative;
+}
+
+.partner-section video {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.partner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 660px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.partner-content h1 {
+    font-size: 50px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-align: center;
+    margin: 0;
+    --anim-delay: 0.25s;
+}
+
+.partner-content p {
+    text-align: center;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 2px;
+    --anim-delay: 0.5s;
+}
+
+.partner-content button {
+    margin-top: 50px;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #b89535;
+    color: #fff;
+    padding: 20px 40px;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    --anim-delay: 0.75s;
+}
+
+.partner-content button:hover {
+    background-color: #ebc03f;
+}
+
+.slide-in {
+    animation-name: jumpin;
+    animation-duration: 1.25s;
+    animation-timing-function: ease-out;
+    position: relative;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    animation-delay: var(--anim-delay, 0.5s);
+}
+
+@keyframes jumpin {
+    0% {
+        opacity: 0;
+        bottom: 15px;
+    }
+
+    100% {
+        opacity: 1;
+        bottom: 0px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .partner-content {
+        width: 85%;
+    }
+
+    .partner-content h1 {
+        font-size: 30px;
+    }
+}

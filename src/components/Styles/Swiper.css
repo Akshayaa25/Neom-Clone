@@ -1,0 +1,153 @@
+.swiper {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.swiper-section {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+}
+
+.swiper-card {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.swiper-card video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-card video source {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.arrow {
+    color: #fff;
+    font-size: 25px;
+    padding: 10px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.arrow-left {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+}
+.arrow-right {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+}
+
+.arrow:hover {
+    background-color: #ebc03f;
+    border: 2px solid #ebc03f;
+}
+
+.swiper-content {
+    width: 400px;
+    position: absolute;
+    left: 70px;
+    bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.swiper-content h1 {
+    color: #fff;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.swiper-content p {
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin: 0;
+    color: #fff;
+}
+
+.swiper-btns {
+    display: flex;
+    gap: 30px;
+}
+
+.play-btn {
+    padding: 15px 17px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    flex-shrink: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.play-icon {
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.learn-more {
+    color: #1d1f22;
+    border-radius: 40px;
+    padding: 12px 40px;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.learn-more:hover {
+    background-color: #ebc03f;
+    color: white;
+}
+
+.play-btn:hover {
+    background-color: #ebc03f;
+    color: white;
+}
+
+@media screen and (max-width: 991px) {
+    .swiper-content {
+        left: 20px;
+        width: 90%;
+    }
+    .swiper-content h1 {
+        font-size: 37px;
+    }
+
+    .learn-more {
+        flex-grow: 1;
+    }
+
+    .arrow {
+        /* display: none; */
+    }
+}

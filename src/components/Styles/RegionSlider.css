@@ -1,0 +1,199 @@
+.region {
+    width: 100%;
+    height: 700px;
+    position: relative;
+    /* background-image: url('../../assets/Region.jpeg'); */
+}
+
+.region img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s;
+}
+
+.place {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ebc03f;
+    cursor: pointer;
+    animation: box-shadow-pulse 2s infinite;
+    transition: background-color .25s ease, opacity .25s ease;
+}
+
+.place1 {
+    top: 34%;
+    left: 48%;
+}
+
+.place2 {
+    top: 44%;
+    left: 44%;
+}
+
+.place3 {
+    top: 54%;
+    left: 40%;
+}
+
+.place4 {
+    top: 64%;
+    left: 36%;
+}
+
+
+.region-tab {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    color: white;
+}
+
+.region-tab h1 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 38px;
+    font-weight: 400;
+}
+
+.region-tab ul {
+    margin-top: 70px;
+    list-style: none;
+    padding: 0;
+}
+
+.region-tab ul li {
+    width: 250px;
+    padding: 20px 0 40px 0px;
+    border-top: 2px solid rgb(138, 138, 138);
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.region-tab ul li:nth-child(1) {
+    color: #ebc03f;
+    border-top: 2px solid #ebc03f;
+}
+
+.region-weather {
+    position: absolute;
+    top: 27%;
+    right: 5%;
+    width: 460px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.weather {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px 20px;
+    border-top: 3px solid #ebc03f;
+    padding-top: 20px;
+}
+
+.weather-ct {
+    width: 215px;
+    color: #ebc03f;
+}
+
+.weather-ct p {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.weather-ct-head {
+    width: 100%;
+    height: 40px;
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.weather-ct-head span {
+    font-size: 16px;
+}
+
+.weather-ct-head svg{
+    width: 40px;
+}
+
+.weather-ct-head svg path {
+    fill: #ebc03f;
+}
+
+.weather-ct p {
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.weather-desc {
+    color: white;
+    font-size: 15px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    line-height: 1.7;
+}
+
+.region-weather button {
+    color: #1d1f22;
+    border-radius: 40px;
+    padding: 20px 40px;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: background-color 0.3s;
+}
+
+.region-weather button:hover {
+    background-color: #ebc03f;
+    color: white;
+}
+
+@keyframes box-shadow-pulse {
+    0% {
+        -webkit-box-shadow: 0 0 0 0 white;
+        box-shadow: 0 0 0 0 white;
+    }
+
+    70% {
+        -webkit-box-shadow: 0 0 0 10px hsla(0, 0%, 100%, 0);
+        box-shadow: 0 0 0 10px hsla(0, 0%, 100%, 0);
+    }
+
+    100% {
+        -webkit-box-shadow: 0 0 0 0 hsla(0, 0%, 100%, 0);
+        box-shadow: 0 0 0 0 hsla(0, 0%, 100%, 0);
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .region {
+        height: 100vw;
+    }
+    .region-tab {
+        display: none;
+    }
+
+    .region-weather {
+        display: none;
+    }
+
+    .region img {
+        aspect-ratio: 1;
+    }
+}
